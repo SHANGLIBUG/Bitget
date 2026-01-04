@@ -1,0 +1,201 @@
+{
+  "code": 0,
+  "message": "0",
+  "ttl": 1,
+  "data": {
+    "mid": 1045611137,
+    "name": "橙子聊交易",
+    "sex": "保密",
+    "face": "https://i2.hdslb.com/bfs/face/accf09f85cbee2c57bcf712199f874f66aa737a4.jpg",
+    "face_nft": 0,
+    "face_nft_type": 0,
+    "sign": "仅在B站发布视频   ",
+    "rank": 10000,
+    "level": 6,
+    "jointime": 0,
+    "moral": 0,
+    "silence": 0,
+    "control": 0,
+    "coins": 0,
+    "fans_badge": true,
+    "fans_medal": {
+      "show": false,
+      "wear": false,
+      "medal": null,
+      "detail": null
+    },
+    "official": {
+      "role": 0,
+      "title": "",
+      "desc": "",
+      "type": -1
+    },
+    "vip": {
+      "type": 0,
+      "status": 0,
+      "due_date": 0,
+      "vip_pay_type": 0,
+      "theme_type": 0,
+      "label": {
+        "path": "",
+        "text": "",
+        "label_theme": "",
+        "text_color": "",
+        "bg_style": 0,
+        "bg_color": "",
+        "border_color": "",
+        "use_img_label": true,
+        "img_label_uri_hans": "",
+        "img_label_uri_hant": "",
+        "img_label_uri_hans_static": "https://i0.hdslb.com/bfs/vip/d7b702ef65a976b20ed854cbd04cb9e27341bb79.png",
+        "img_label_uri_hant_static": "https://i0.hdslb.com/bfs/activity-plat/static/20220614/e369244d0b14644f5e1a06431e22a4d5/KJunwh19T5.png",
+        "label_id": 0,
+        "label_goto": null
+      },
+      "avatar_subscript": 0,
+      "nickname_color": "",
+      "role": 0,
+      "avatar_subscript_url": "",
+      "tv_vip_status": 0,
+      "tv_vip_pay_type": 0,
+      "tv_due_date": 0,
+      "avatar_icon": {
+        "icon_resource": {}
+      },
+      "ott_info": {
+        "vip_type": 0,
+        "pay_type": 0,
+        "pay_channel_id": "",
+        "status": 0,
+        "overdue_time": 0
+      },
+      "super_vip": {
+        "is_super_vip": false
+      }
+    },
+    "pendant": {
+      "pid": 0,
+      "name": "",
+      "image": "",
+      "expire": 0,
+      "image_enhance": "",
+      "image_enhance_frame": "",
+      "n_pid": 0
+    },
+    "nameplate": {
+      "nid": 8,
+      "name": "知名偶像",
+      "image": "https://i2.hdslb.com/bfs/face/27a952195555e64508310e366b3e38bd4cd143fc.png",
+      "image_small": "https://i1.hdslb.com/bfs/face/0497be49e08357bf05bca56e33a0637a273a7610.png",
+      "level": "稀有勋章",
+      "condition": "所有自制视频总播放数\u003e=100万，数据次日更新"
+    },
+    "user_honour_info": {
+      "mid": 0,
+      "colour": null,
+      "tags": [],
+      "is_latest_100honour": 0
+    },
+    "is_followed": false,
+    "top_photo": "bfs/space/cb1c3ef50e22b6096fde67febe863494caefebad.png",
+    "sys_notice": {},
+    "live_room": {
+      "roomStatus": 1,
+      "liveStatus": 0,
+      "url": "https://live.bilibili.com/32468400?broadcast_type=0\u0026is_room_feed=1",
+      "title": "聊天 聊大饼",
+      "cover": "https://i0.hdslb.com/bfs/live/user_cover/70c8c4f22383b7c6c0ef4003deb80ee5c7c6f684.png",
+      "roomid": 32468400,
+      "roundStatus": 0,
+      "broadcast_type": 0,
+      "watched_show": {
+        "switch": true,
+        "num": 1,
+        "text_small": "1",
+        "text_large": "1人看过",
+        "icon": "https://i0.hdslb.com/bfs/live/a725a9e61242ef44d764ac911691a7ce07f36c1d.png",
+        "icon_location": "",
+        "icon_web": "https://i0.hdslb.com/bfs/live/8d9d0f33ef8bf6f308742752d13dd0df731df19c.png"
+      }
+    },
+    "birthday": "",
+    "school": null,
+    "profession": {
+      "name": "",
+      "department": "",
+      "title": "",
+      "is_show": 0
+    },
+    "tags": null,
+    "series": {
+      "user_upgrade_status": 3,
+      "show_upgrade_window": false
+    },
+    "is_senior_member": 1,
+    "mcn_info": null,
+    "gaia_res_type": 0,
+    "gaia_data": null,
+    "is_risk": false,
+    "elec": {
+      "show_info": {
+        "show": true,
+        "state": 3,
+        "title": "充电",
+        "icon": "https://i0.hdslb.com/bfs/garb/item/33e2e72d9a0c855f036b4cb55448f44af67a0635.png",
+        "jump_url": "https://www.bilibili.com/h5/upower/index?mid=1045611137\u0026navhide=1\u0026oid=1045611137",
+        "total": 1332,
+        "list": [
+          {
+            "pay_mid": 507423095,
+            "rank": 1,
+            "avatar": "https://i2.hdslb.com/bfs/face/318897959ee1df7f6a9c46ae47071286a1443226.jpg",
+            "uname": "剑歌行233"
+          },
+          {
+            "pay_mid": 565142,
+            "rank": 2,
+            "avatar": "https://i2.hdslb.com/bfs/face/9c52c5cfa8d76b03830f7e07119001b100c1d837.jpg",
+            "uname": "JosephJames"
+          },
+          {
+            "pay_mid": 325855824,
+            "rank": 3,
+            "avatar": "https://i0.hdslb.com/bfs/face/5954b2a4247dbba812f5de61f9cbb93b730e9a43.jpg",
+            "uname": "ysyysy123"
+          },
+          {
+            "pay_mid": 16578579,
+            "rank": 4,
+            "avatar": "https://i0.hdslb.com/bfs/face/33e613eca659c3591ebd056c5aae3df6fbd88540.jpg",
+            "uname": "Emily真媞太好啦"
+          }
+        ],
+        "upower_count_show": true,
+        "long_title": "",
+        "jump_url_web": "https://member.bilibili.com/mall/upower-pay?mid=1045611137"
+      }
+    },
+    "contract": null,
+    "certificate_show": false,
+    "name_render": null,
+    "top_photo_v2": {
+      "sid": 1,
+      "l_img": "https://i1.hdslb.com/bfs/space/cb1c3ef50e22b6096fde67febe863494caefebad.png",
+      "l_200h_img": "https://i1.hdslb.com/bfs/activity-plat/static/0977767b2e79d8ad0a36a731068a83d7/1sz3p8w2Sk.png"
+    },
+    "theme": null,
+    "attestation": {
+      "type": 0,
+      "common_info": {
+        "title": "",
+        "prefix": "",
+        "prefix_title": ""
+      },
+      "splice_info": {
+        "title": ""
+      },
+      "icon": "",
+      "desc": ""
+    }
+  }
+}

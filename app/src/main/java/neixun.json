@@ -1,0 +1,23 @@
+{
+  "code": 200,
+  "message": null,
+  "result": {
+    "id": 10000018,
+    "videoType": null,
+    "name": "老张内训课_2025-05-20 14:21:04",
+    "orgs": null,
+    "height": 720,
+    "width": 1280,
+    "duration": 141,
+    "url": "https://vod.foretech.cn/6cd1aabfvodcq1500037625/080b3df93560136621129744161/f0.mp4?t=6b2c8ee0&us=be437d9622&sign=1e0562f57568ae1b9601ffc7542d5301",
+    "oprUserId": null,
+    "oprUserName": null,
+    "createTime": "2025-05-20 14:21:05",
+    "frameImage": null,
+    "videoPoster": null,
+    "videoDesc": null,
+    "shareImg": null,
+    "fwhInfoList": null,
+    "fileId": "3560136621129744161"
+  }
+}

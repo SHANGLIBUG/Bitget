@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_neixun"
+        android:title="内训课"
+        android:icon="@drawable/neixun" />
+    <item
+        android:id="@+id/nav_gupai"
+        android:title="股拍"
+        android:icon="@drawable/gupai" />
+    <item
+        android:id="@+id/nav_setting"
+        android:title="设置"
+        android:icon="@drawable/setting" />
+</menu>

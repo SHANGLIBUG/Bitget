@@ -1,0 +1,24 @@
+{
+  "code": 200,
+  "message": null,
+  "result": {
+    "id": 10000028,
+    "videoType": null,
+    "name": "VIP尊享内训课_2025-05-20 16:09:45",
+    "orgs": null,
+    "height": 720,
+    "width": 1280,
+    "duration": 421,
+    "url": "https://vod.foretech.cn/6cd1aabfvodcq1500037625/a01ec8fb3560136621138417571/f0.mp4?t=6b2c8ee0&us=6342d8a66e&sign=935b34f528383db1bf67298153ba516b",
+    "oprUserId": null,
+    "oprUserName": null,
+    "createTime": "2025-05-20 16:09:46",
+    "frameImage": null,
+    "videoPoster": null,
+    "videoDesc": null,
+    "shareImg": null,
+    "fwhInfoList": null,
+    "fileId": "3560136621138417571"
+  }
+}
+

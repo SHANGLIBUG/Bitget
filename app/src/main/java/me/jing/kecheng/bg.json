@@ -1,0 +1,31 @@
+{
+  "code": "00000",
+  "msg": "success",
+  "requestTime": 1767507852054,
+  "data": [
+    {
+      "marginCoin": "USDT",
+      "locked": "0",
+      "available": "480.80609429",
+      "crossedMaxAvailable": "480.80609429",
+      "isolatedMaxAvailable": "480.80609429",
+      "maxTransferOut": "480.80609429",
+      "accountEquity": "480.80609429",
+      "usdtEquity": "480.806094294027",
+      "btcEquity": "0.005244131368",
+      "crossedRiskRate": "0",
+      "unrealizedPL": "0",
+      "coupon": "0",
+      "crossedUnrealizedPL": "",
+      "isolatedUnrealizedPL": "",
+      "grant": "",
+      "unionTotalMargin": "480.80609429",
+      "unionAvailable": "480.80609429",
+      "unionMm": "0",
+      "assetList": [],
+      "assetMode": "single",
+      "isolatedMargin": "0",
+      "crossedMargin": "0"
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "code": 0,
+  "message": "0",
+  "ttl": 1,
+  "data": {
+    "mid": 3493257782757629,
+    "name": "狐狸大王r",
+    "sex": "男",
+    "face": "https://i2.hdslb.com/bfs/face/4bbbb2d7d3244e44981239b124d40e1c742f8f6c.jpg",
+    "face_nft": 0,
+    "face_nft_type": 0,
+    "sign": "枪神传奇加QQ2208738910",
+    "rank": 10000,
+    "level": 5,
+    "jointime": 0,
+    "moral": 0,
+    "silence": 0,
+    "control": 0,
+    "coins": 0,
+    "fans_badge": true,
+    "fans_medal": {
+      "show": true,
+      "wear": true,
+      "medal": {
+        "level": 29,
+        "guard_level": 0,
+        "medal_color": 2951253,
+        "medal_name": "AKking",
+        "medal_color_border": 2951253,
+        "medal_color_start": 2951253,
+        "medal_color_end": 10329087
+      },
+      "detail": {
+        "uid": 3493257782757629,
+        "medal_color_end": "#FFDDF0FB",
+        "level": 29,
+        "guard_level": 0,
+        "first_icon": "",
+        "second_icon": "",
+        "medal_color_level": "#FF7DB4DE",
+        "medal_color_name": "#FF3F8DBA",
+        "medal_level_bg_color": 0,
+        "medal_name": "AKking",
+        "medal_id": 1005071,
+        "medal_color": "#FFDDF0FB",
+        "medal_color_border": "#FFDDF0FB"
+      }
+    },
+    "official": {
+      "role": 0,
+      "title": "",
+      "desc": "",
+      "type": -1
+    },
+    "vip": {
+      "type": 0,
+      "status": 0,
+      "due_date": 0,
+      "vip_pay_type": 0,
+      "theme_type": 0,
+      "label": {
+        "path": "",
+        "text": "",
+        "label_theme": "",
+        "text_color": "",
+        "bg_style": 0,
+        "bg_color": "",
+        "border_color": "",
+        "use_img_label": true,
+        "img_label_uri_hans": "",
+        "img_label_uri_hant": "",
+        "img_label_uri_hans_static": "https://i0.hdslb.com/bfs/vip/d7b702ef65a976b20ed854cbd04cb9e27341bb79.png",
+        "img_label_uri_hant_static": "https://i0.hdslb.com/bfs/activity-plat/static/20220614/e369244d0b14644f5e1a06431e22a4d5/KJunwh19T5.png",
+        "label_id": 0,
+        "label_goto": null
+      },
+      "avatar_subscript": 0,
+      "nickname_color": "",
+      "role": 0,
+      "avatar_subscript_url": "",
+      "tv_vip_status": 0,
+      "tv_vip_pay_type": 0,
+      "tv_due_date": 0,
+      "avatar_icon": {
+        "icon_resource": {}
+      },
+      "ott_info": {
+        "vip_type": 0,
+        "pay_type": 0,
+        "pay_channel_id": "",
+        "status": 0,
+        "overdue_time": 0
+      },
+      "super_vip": {
+        "is_super_vip": false
+      }
+    },
+    "pendant": {
+      "pid": 0,
+      "name": "",
+      "image": "",
+      "expire": 0,
+      "image_enhance": "",
+      "image_enhance_frame": "",
+      "n_pid": 0
+    },
+    "nameplate": {
+      "nid": 8,
+      "name": "知名偶像",
+      "image": "https://i1.hdslb.com/bfs/face/27a952195555e64508310e366b3e38bd4cd143fc.png",
+      "image_small": "https://i1.hdslb.com/bfs/face/0497be49e08357bf05bca56e33a0637a273a7610.png",
+      "level": "稀有勋章",
+      "condition": "所有自制视频总播放数\u003e=100万，数据次日更新"
+    },
+    "user_honour_info": {
+      "mid": 0,
+      "colour": null,
+      "tags": [],
+      "is_latest_100honour": 0
+    },
+    "is_followed": false,
+    "top_photo": "bfs/space/cb1c3ef50e22b6096fde67febe863494caefebad.png",
+    "sys_notice": {},
+    "live_room": {
+      "roomStatus": 1,
+      "liveStatus": 1,
+      "url": "https://live.bilibili.com/27308132?broadcast_type=0\u0026is_room_feed=1",
+      "title": "带粉丝爽炸",
+      "cover": "https://i0.hdslb.com/bfs/live/user_cover/0b0e48084c6c1a0d24fd1fb081ed66ff138b4753.png",
+      "roomid": 27308132,
+      "roundStatus": 0,
+      "broadcast_type": 0,
+      "watched_show": {
+        "switch": true,
+        "num": 695,
+        "text_small": "695",
+        "text_large": "695人看过",
+        "icon": "https://i0.hdslb.com/bfs/live/a725a9e61242ef44d764ac911691a7ce07f36c1d.png",
+        "icon_location": "",
+        "icon_web": "https://i0.hdslb.com/bfs/live/8d9d0f33ef8bf6f308742752d13dd0df731df19c.png"
+      }
+    },
+    "birthday": "04-08",
+    "school": {
+      "name": ""
+    },
+    "profession": {
+      "name": "",
+      "department": "",
+      "title": "",
+      "is_show": 0
+    },
+    "tags": null,
+    "series": {
+      "user_upgrade_status": 3,
+      "show_upgrade_window": false
+    },
+    "is_senior_member": 0,
+    "mcn_info": null,
+    "gaia_res_type": 0,
+    "gaia_data": null,
+    "is_risk": false,
+    "elec": {
+      "show_info": {
+        "show": true,
+        "state": 3,
+        "title": "充电",
+        "icon": "https://i0.hdslb.com/bfs/garb/item/33e2e72d9a0c855f036b4cb55448f44af67a0635.png",
+        "jump_url": "https://www.bilibili.com/h5/upower/index?mid=3493257782757629\u0026navhide=1\u0026oid=3493257782757629",
+        "total": 4,
+        "list": [
+          {
+            "pay_mid": 3546580019841414,
+            "rank": 1,
+            "avatar": "https://i0.hdslb.com/bfs/face/2a548d02af18f33b9bd8accba6fbbd1a6f63d358.jpg",
+            "uname": "世界级荣光"
+          }
+        ],
+        "upower_count_show": true,
+        "long_title": "",
+        "jump_url_web": "https://member.bilibili.com/mall/upower-pay?mid=3493257782757629"
+      }
+    },
+    "contract": null,
+    "certificate_show": false,
+    "name_render": null,
+    "top_photo_v2": {
+      "sid": 1,
+      "l_img": "https://i2.hdslb.com/bfs/space/cb1c3ef50e22b6096fde67febe863494caefebad.png",
+      "l_200h_img": "https://i1.hdslb.com/bfs/activity-plat/static/0977767b2e79d8ad0a36a731068a83d7/1sz3p8w2Sk.png"
+    },
+    "theme": null,
+    "attestation": {
+      "type": 0,
+      "common_info": {
+        "title": "",
+        "prefix": "",
+        "prefix_title": ""
+      },
+      "splice_info": {
+        "title": ""
+      },
+      "icon": "",
+      "desc": ""
+    }
+  }
+}
