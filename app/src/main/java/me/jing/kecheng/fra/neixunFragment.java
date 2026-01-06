@@ -33,10 +33,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.atomic.AtomicInteger;
 
 import me.jing.kecheng.R;
 import me.jing.kecheng.utils.db.neixunDB.NeixunDbHelper;
@@ -44,14 +40,10 @@ import me.jing.kecheng.utils.files.FileUtils;
 import me.jing.kecheng.utils.http.ConcurrentHttpFetcher;
 import me.jing.kecheng.utils.lists.neixunItem;
 import me.jing.kecheng.utils.times.TimeTools;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 
 
 public class neixunFragment extends Fragment {
     private static final String TAG = "内训课"; // 日志标签
-    private Button neixun_btn_getVideo;
     private static final String BASE_URL = "https://kd-live.foretech.cn/webcast/api/queryVideoById";
     private static final int START_ID = 10000999;
     private static final int END_ID = 10000000; // 包含此 ID
@@ -70,13 +62,12 @@ public class neixunFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         Log.e(TAG, "onCreateView");
-        View view = inflater.inflate(R.layout.fragment_neixun, container, false);
         // Inflate the layout for this fragment
         // 假设你有一个按钮触发请求（或直接自动触发）
         // 这里以自动触发为例（你也可以绑定到按钮点击）
         // 初始化文件
 
-        return view;
+        return inflater.inflate(R.layout.fragment_neixun, container, false);
     }
 
 
@@ -84,15 +75,12 @@ public class neixunFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         neixunDbHelper=new NeixunDbHelper(requireContext());
-        neixun_btn_getVideo=view.findViewById(R.id.neixun_btn_getVideo);
+        Button neixun_btn_getVideo = view.findViewById(R.id.neixun_btn_getVideo);
         neixun_listview=view.findViewById(R.id.neixun_listview);
         //点击按钮进行抓取视频
-        neixun_btn_getVideo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                initDataFile(requireActivity());
-                startFetch();
-            }
+        neixun_btn_getVideo.setOnClickListener(v -> {
+            initDataFile(requireActivity());
+            startFetch();
         });
 
         //listview操作
@@ -247,13 +235,13 @@ public class neixunFragment extends Fragment {
     private void addList() {
         // 初始化空列表和适配器
         videoList = new ArrayList<>();
-        adapter=new ArrayAdapter<>(requireContext(),R.layout.item_neixun,videoList){
+        adapter= new ArrayAdapter<>(requireContext(), R.layout.item_neixun, videoList) {
             @NonNull
             @Override
             public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-                View view=convertView;
-                if (view==null){
-                    view=LayoutInflater.from(getContext()).inflate(R.layout.item_neixun, parent, false);
+                View view = convertView;
+                if (view == null) {
+                    view = LayoutInflater.from(getContext()).inflate(R.layout.item_neixun, parent, false);
                 }
                 neixunItem item = getItem(position);
                 if (item != null) {

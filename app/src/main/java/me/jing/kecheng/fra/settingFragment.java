@@ -14,18 +14,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 import me.jing.kecheng.R;
 import me.jing.kecheng.utils.bitget.CheckSign;
-import me.jing.kecheng.utils.bitget.OkHttpUtil;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.ConnectionSpec;
@@ -52,7 +45,7 @@ public class settingFragment extends Fragment {
         return new OkHttpClient.Builder()
                 .connectTimeout(10, TimeUnit.SECONDS)
                 .readTimeout(15, TimeUnit.SECONDS)
-                .connectionSpecs(Arrays.asList(spec))
+                .connectionSpecs(List.of(spec))
                 .build();
     }
     private OkHttpClient getStableForeignClient() {
@@ -110,13 +103,15 @@ public class settingFragment extends Fragment {
 
             client.newCall(request).enqueue(new Callback() {
                 @Override
-                public void onFailure(Call call, IOException e) {
+                public void onFailure(@NonNull Call call, @NonNull IOException e) {
                     Log.e("bitget", "请求失败", e);
                 }
 
                 @Override
-                public void onResponse(Call call, Response response) throws IOException {
-                    Log.e("bitget", "响应: " + response.body().string());
+                public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
+                    if (response.body() != null) {
+                        Log.e("bitget", "响应: " + response.body().string());
+                    }
                 }
             });
         }catch (Exception e){

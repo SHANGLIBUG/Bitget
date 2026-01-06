@@ -24,16 +24,10 @@ import com.google.gson.JsonObject;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
+import java.util.*;
 
 import me.jing.kecheng.R;
 import me.jing.kecheng.utils.db.gupaiDB.GupaiDbHelper;
-import me.jing.kecheng.utils.db.neixunDB.NeixunDbHelper;
 import me.jing.kecheng.utils.files.FileUtils;
 import me.jing.kecheng.utils.http.gupaiBean.ApiResponse;
 import me.jing.kecheng.utils.http.ConcurrentHttpFetcher;
@@ -46,11 +40,9 @@ import okhttp3.Response;
 
 
 public class gupaiFragment extends Fragment {
-    private Button gupai_btn_getVideo;
     private static final String TAG = "GuPaiFragment";
-    private OkHttpClient client = new OkHttpClient();
-    private File dataFile,dataFile_test;
-    private boolean isFetching = false;
+    private final OkHttpClient client = new OkHttpClient();
+    private File dataFile;
     // 用于线程安全写文件
     private final Object fileLock = new Object();
     private static final String URL = "https://spero-outspace.secon.cn/api/spero-ultron-service/v3/live/author/tape/spero_308591?page=1&limit=999";
@@ -61,38 +53,29 @@ public class gupaiFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_gupai, container, false);
         // Inflate the layout for this fragment
         // 假设你有一个按钮触发请求（或直接自动触发）
         // 这里以自动触发为例（你也可以绑定到按钮点击）
         // 初始化文件
 
-        return view;
+        return inflater.inflate(R.layout.fragment_gupai, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         gupaiDbHelper=new GupaiDbHelper(requireContext());
-        gupai_btn_getVideo = view.findViewById(R.id.gupai_btn_getVideo);
-        gupai_btn_getVideo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                initDataFile(requireActivity());
-                startFetch();
-            }
+        Button gupai_btn_getVideo = view.findViewById(R.id.gupai_btn_getVideo);
+        gupai_btn_getVideo.setOnClickListener(v -> {
+            initDataFile(requireActivity());
+            startFetch();
         });
 
 
     }
 
     private void startFetch() {
-        getActivity().runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                Toast.makeText(getActivity(), "开始执行", Toast.LENGTH_LONG).show();
-            }
-        });
+        Objects.requireNonNull(getActivity()).runOnUiThread(() -> Toast.makeText(getActivity(), "开始执行", Toast.LENGTH_LONG).show());
         Request request = new Request.Builder()
                 .url(URL)
                 .addHeader("clienttype", "android")
@@ -143,6 +126,32 @@ public class gupaiFragment extends Fragment {
     }
 
     private void fetchDetailsConcurrently(List<String> urls) {
+        ConcurrentHttpFetcher fetcher = getFetcher();
+
+        fetcher.fetchConcurrentGet(
+                urls,
+                (url, responseBody) -> {
+                    //FileUtils.writeToFile(dataFile_test,responseBody,false);
+                    //Log.e("股拍结果", responseBody);
+                    parseAndWrite(responseBody);
+                },
+                (url, errorMsg) -> {
+                    Log.e(TAG, "详情请求失败: " + url + " | " + errorMsg);
+                    // 可选：写入失败日志
+                },
+                (success, failure) -> new Handler(Looper.getMainLooper()).post(() -> {
+                    Toast.makeText(getContext(),
+                            String.format("抓取完成！成功: %d, 失败: %d", success, failure),
+                            Toast.LENGTH_LONG).show();
+                    //resetButton();
+                    Log.e("股拍结果", String.format("抓取完成！成功: %d, 失败: %d", success, failure));
+                })
+        );
+
+    }
+
+    @NonNull
+    private static ConcurrentHttpFetcher getFetcher() {
         ConcurrentHttpFetcher fetcher = new ConcurrentHttpFetcher();
 
         Map<String, String> headers = new HashMap<>();
@@ -160,29 +169,7 @@ public class gupaiFragment extends Fragment {
         headers.put("Accept-Encoding", "gzip");
         headers.put("User-Agent", "okhttp/4.3.1");
         fetcher.setDefaultHeaders(headers);
-
-        fetcher.fetchConcurrentGet(
-                urls,
-                (url, responseBody) -> {
-                    //FileUtils.writeToFile(dataFile_test,responseBody,false);
-                    //Log.e("股拍结果", responseBody);
-                    parseAndWrite(responseBody);
-                },
-                (url, errorMsg) -> {
-                    Log.e(TAG, "详情请求失败: " + url + " | " + errorMsg);
-                    // 可选：写入失败日志
-                },
-                (success, failure) -> {
-                    new Handler(Looper.getMainLooper()).post(() -> {
-                        Toast.makeText(getContext(),
-                                String.format("抓取完成！成功: %d, 失败: %d", success, failure),
-                                Toast.LENGTH_LONG).show();
-                        //resetButton();
-                        Log.e("股拍结果", String.format("抓取完成！成功: %d, 失败: %d", success, failure));
-                    });
-                }
-        );
-
+        return fetcher;
     }
 
     private void parseAndWrite(String responseBody) {

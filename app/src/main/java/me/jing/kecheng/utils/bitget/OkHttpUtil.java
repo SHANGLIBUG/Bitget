@@ -4,6 +4,7 @@ import okhttp3.*;
 
 import java.io.IOException;
 import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 public class OkHttpUtil {
@@ -26,17 +27,14 @@ public class OkHttpUtil {
      * 发送 GET 请求（带查询参数）
      */
     public static String get(String url, Map<String, String> params) throws IOException {
-        HttpUrl.Builder urlBuilder = HttpUrl.parse(url).newBuilder();
+        HttpUrl.Builder urlBuilder = Objects.requireNonNull(HttpUrl.parse(url)).newBuilder();
         if (params != null) {
             for (Map.Entry<String, String> entry : params.entrySet()) {
                 urlBuilder.addQueryParameter(entry.getKey(), entry.getValue());
             }
         }
         String finalUrl = urlBuilder.build().toString();
-        Request request = new Request.Builder()
-                .url(finalUrl)
-                .build();
-        return execute(request);
+        return get(finalUrl);
     }
 
     // OkHttpUtil.java - 新增方法
